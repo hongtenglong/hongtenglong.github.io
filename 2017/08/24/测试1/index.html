@@ -222,8 +222,7 @@
 
     <div class="post-content">
       
-        <p>使用EL表达式输出内置对象中的数据语法：<br>${内置对象作用域.属性名}<br>如果存入的属性是对象:${内置对象作用于.存入属性名.属性名……}<br>request.getSession().setAttribute(“pageUtil”,pageUtil);<br>${sessionScope.pageUtil.list}</p>
-<p>如果明确指定属性在内置对象中的名称是唯一的，可以省略内置对象作用域<br><figure class="highlight java"><figcaption><span>JAVA</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$&#123;pageUtil.list&#125;</div></pre></td></tr></table></figure><br>如果多个内置对象容器中存储同名属性，在使用EL表达式输出时没有显式说明作用域，那么默认按照</p>
+        <p>使用EL表达式输出内置对象中的数据语法：<br>${内置对象作用域.属性名}<br>如果存入的属性是对象:${内置对象作用于.存入属性名.属性名……}<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">request.getSession().setAttribute(<span class="string">"pageUtil"</span>,pageUtil);</div><div class="line">$&#123;sessionScope.pageUtil.list&#125;</div></pre></td></tr></table></figure><br>如果明确指定属性在内置对象中的名称是唯一的，可以省略内置对象作用域<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$&#123;pageUtil.list&#125;</div></pre></td></tr></table></figure><br>如果多个内置对象容器中存储同名属性，在使用EL表达式输出时没有显式说明作用域，那么默认按照   待续。。。</p>
 
       
     </div>
