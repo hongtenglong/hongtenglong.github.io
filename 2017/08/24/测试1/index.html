@@ -222,7 +222,8 @@
 
     <div class="post-content">
       
-        <p>使用EL表达式输出内置对象中的数据语法：<br>${内置对象作用域.属性名}</p>
+        <p>使用EL表达式输出内置对象中的数据语法：<br>${内置对象作用域.属性名}<br>如果存入的属性是对象:${内置对象作用于.存入属性名.属性名……}<br>request.getSession().setAttribute(“pageUtil”,pageUtil);<br>${sessionScope.pageUtil.list}</p>
+<p>如果明确指定属性在内置对象中的名称是唯一的，可以省略内置对象作用域<br>${pageUtil.list}</p>
 
       
     </div>
