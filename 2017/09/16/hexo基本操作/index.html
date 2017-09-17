@@ -151,7 +151,7 @@
           <a class="menu-item-link" href="/">
             
             
-              首页
+              Home
             
           </a>
         </li>
@@ -160,7 +160,7 @@
           <a class="menu-item-link" href="/archives/">
             
             
-              归档
+              Archives
             
           </a>
         </li>
@@ -169,7 +169,7 @@
           <a class="menu-item-link" href="/tags">
             
             
-              标签
+              Tags
             
           </a>
         </li>
@@ -178,7 +178,7 @@
           <a class="menu-item-link" href="/categories">
             
             
-              分类
+              Categories
             
           </a>
         </li>
@@ -187,7 +187,7 @@
           <a class="menu-item-link" href="/about">
             
             
-              关于
+              About
             
           </a>
         </li>
@@ -222,9 +222,9 @@
     
     
   <div class="post-toc" id="post-toc">
-    <h2 class="post-toc-title">文章目录</h2>
+    <h2 class="post-toc-title">Contents</h2>
     <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#init"><span class="toc-text">init</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#new"><span class="toc-text">new</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#generate"><span class="toc-text">generate</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#publish"><span class="toc-text">publish</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#server"><span class="toc-text">server</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#deploy"><span class="toc-text">deploy</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#clean"><span class="toc-text">clean</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#list"><span class="toc-text">list</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#version"><span class="toc-text">version</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安全模式"><span class="toc-text">安全模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#调试模式"><span class="toc-text">调试模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#简洁模式"><span class="toc-text">简洁模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#显示草稿"><span class="toc-text">显示草稿</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#init"><span class="toc-text">init</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#new"><span class="toc-text">new</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#generate"><span class="toc-text">generate</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#publish"><span class="toc-text">publish</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#server"><span class="toc-text">server</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#deploy"><span class="toc-text">deploy</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#clean"><span class="toc-text">clean</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#list"><span class="toc-text">list</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#version"><span class="toc-text">version</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安全模式"><span class="toc-text">安全模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#调试模式"><span class="toc-text">调试模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#简洁模式"><span class="toc-text">简洁模式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#显示草稿"><span class="toc-text">显示草稿</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#草稿"><span class="toc-text">草稿</span></a></li></ol>
     </div>
   </div>
 
@@ -258,6 +258,7 @@
 <h1 id="简洁模式"><a href="#简洁模式" class="headerlink" title="简洁模式"></a>简洁模式</h1><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo --silent</div></pre></td></tr></table></figure>
 <p>隐藏终端信息</p>
 <h1 id="显示草稿"><a href="#显示草稿" class="headerlink" title="显示草稿"></a>显示草稿</h1><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo --draft</div></pre></td></tr></table></figure>
+<h1 id="草稿"><a href="#草稿" class="headerlink" title="草稿"></a>草稿</h1><p>草稿是 Hexo 的一种特殊布局：draft，这种布局在建立时会被保存到 source/_drafts 文件夹，您可通过 publish 命令将草稿移动到 source/_posts 文件夹，该命令的使用方式与 new 十分类似，您也可在命令中指定 layout 来指定布局。<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo publish [layout] &lt;title&gt;</div></pre></td></tr></table></figure><br>草稿默认不会显示在页面中，您可在执行时加上 –draft 参数，或是把 render_drafts 参数设为 true 来预览草稿。</p>
 
       
     </div>
@@ -365,11 +366,11 @@
 
 <div class="copyright">
   <span class="power-by">
-    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    主题 - 
+    Theme - 
     <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
   </span>
 
