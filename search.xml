@@ -3,11 +3,34 @@
   
     
     <entry>
-      <title><![CDATA[hexo基本操作]]></title>
+      <title><![CDATA[hexo的基本操作]]></title>
       <url>/2017/09/16/hexo%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
       <content type="html"><![CDATA[<h1 id="init"><a href="#init" class="headerlink" title="init"></a>init</h1><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init [folder]</div></pre></td></tr></table></figure>
 <p>新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。</p>
-<p>#new<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new [layout] &lt;title&gt;</div></pre></td></tr></table></figure><br>新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
+<h1 id="new"><a href="#new" class="headerlink" title="new"></a>new</h1><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new [layout] &lt;title&gt;</div></pre></td></tr></table></figure>
+<p>新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
+<h1 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h1><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate</div></pre></td></tr></table></figure>
+<p>生成静态文件。</p>
+<table><br><tr><td>选项</td> <td>描述</td></tr><br><tr><td>-d, –deploy</td><td>文件生成后立即部署网站</td></tr><br><tr><td>-w</td><td>–watch</td></tr><br></table>
+
+<h1 id="publish"><a href="#publish" class="headerlink" title="publish"></a>publish</h1><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo publish [layout] &lt;filename&gt;</div></pre></td></tr></table></figure>
+<p>发表草稿。</p>
+<h1 id="server"><a href="#server" class="headerlink" title="server"></a>server</h1><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo server</div></pre></td></tr></table></figure>
+<p>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a><br>-p, –port        重设端口<br>-s, –static    只使用静态文件<br>-l, –log        启动日记记录，使用覆盖记录格式</p>
+<h1 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h1><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div></pre></td></tr></table></figure>
+<p>部署网站。<br>-g, –generate    部署之前预先生成静态文件<br>该命令可以简写为：<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo d</div></pre></td></tr></table></figure></p>
+<h1 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h1><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo clean</div></pre></td></tr></table></figure>
+<p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
+<h1 id="list"><a href="#list" class="headerlink" title="list"></a>list</h1><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo list &lt;type&gt;</div></pre></td></tr></table></figure>
+<p>列出网站资料。</p>
+<h1 id="version"><a href="#version" class="headerlink" title="version"></a>version</h1><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo version</div></pre></td></tr></table></figure>
+<p>显示 Hexo 版本。</p>
+<h1 id="安全模式"><a href="#安全模式" class="headerlink" title="安全模式"></a>安全模式</h1><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo --safe</div></pre></td></tr></table></figure>
+<p>在安全模式下，不会载入插件和脚本。当您在安装新插件遭遇问题时，可以尝试以安全模式重新执行。</p>
+<h1 id="调试模式"><a href="#调试模式" class="headerlink" title="调试模式"></a>调试模式</h1><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo --debug</div></pre></td></tr></table></figure>
+<h1 id="简洁模式"><a href="#简洁模式" class="headerlink" title="简洁模式"></a>简洁模式</h1><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo --silent</div></pre></td></tr></table></figure>
+<p>隐藏终端信息</p>
+<h1 id="显示草稿"><a href="#显示草稿" class="headerlink" title="显示草稿"></a>显示草稿</h1><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo --draft</div></pre></td></tr></table></figure>
 ]]></content>
       
         
