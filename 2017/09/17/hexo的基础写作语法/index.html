@@ -1,11 +1,237 @@
-<?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
+<!DOCTYPE html>
+<html lang="">
+  <head>
     
-    <entry>
-      <title><![CDATA[hexo的基础写作语法]]></title>
-      <url>/2017/09/17/hexo%E7%9A%84%E5%9F%BA%E7%A1%80%E5%86%99%E4%BD%9C%E8%AF%AD%E6%B3%95/</url>
-      <content type="html"><![CDATA[<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>Markdown 支持两种标题的语法，类 Setext 和类 atx 形式</p>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="hexo的基础写作语法"/>
+
+
+
+
+  <meta name="keywords" content="hexo, Bazinga" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/default" title="Bazinga">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.5.0" />
+
+
+
+<link rel="canonical" href="http://hongtenglong.top/2017/09/17/hexo的基础写作语法/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.5.0" />
+
+
+
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+    <title> hexo的基础写作语法 - Bazinga </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">Bazinga</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            Home
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            Archives
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            Tags
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            Categories
+          
+        </li>
+      </a>
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            About
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">Bazinga</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              首页
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          hexo的基础写作语法
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2017-09-17
+        </span>
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#标题"><span class="toc-text">标题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#类-Setext-形式"><span class="toc-text">类 Setext 形式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类-Atx-形式"><span class="toc-text">类 Atx 形式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#区块引用-Blockquotes"><span class="toc-text">区块引用 Blockquotes</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#这是一个标题。"><span class="toc-text">这是一个标题。</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#斜体和粗体"><span class="toc-text">斜体和粗体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分割线"><span class="toc-text">分割线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除线"><span class="toc-text">删除线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链接"><span class="toc-text">链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图片"><span class="toc-text">图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码区块"><span class="toc-text">代码区块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#列表与表格"><span class="toc-text">列表与表格</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#无序列表"><span class="toc-text">无序列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#有序列表"><span class="toc-text">有序列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#表格"><span class="toc-text">表格</span></a></li></ol></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>Markdown 支持两种标题的语法，类 Setext 和类 atx 形式</p>
 <h3 id="类-Setext-形式"><a href="#类-Setext-形式" class="headerlink" title="类 Setext 形式"></a>类 Setext 形式</h3><p>类 Setext 形式是用底线的形式，利用 = （最高阶标题）和 - （第二阶标题），例如：</p>
 <pre><code>This is an H1
  =============
@@ -141,60 +367,186 @@
 </tbody>
 </table>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">| Item     | Value     | Qty   |</div><div class="line">| :------- | --------: | :---: |</div><div class="line">| Computer | 1600 USD  | 5     |</div><div class="line">| Phone    | 12 USD    | 12    |</div><div class="line">| Pipe     | 1 USD     | 234   |</div></pre></td></tr></table></figure>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> hexo </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[hexo的基本操作]]></title>
-      <url>/2017/09/16/hexo%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
-      <content type="html"><![CDATA[<h2 id="init"><a href="#init" class="headerlink" title="init"></a>init</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init [folder]</div></pre></td></tr></table></figure>
-<p>新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。</p>
-<h2 id="new"><a href="#new" class="headerlink" title="new"></a>new</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new [layout] &lt;title&gt;</div></pre></td></tr></table></figure>
-<p>新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
-<a id="more"></a>
-<h2 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate</div></pre></td></tr></table></figure>
-<p>生成静态文件。</p>
-<table><br><tr><td>选项</td> <td>描述</td></tr><br><tr><td>-d, –deploy</td><td>文件生成后立即部署网站</td></tr><br><tr><td>-w</td><td>–watch</td></tr><br></table>
 
-<h2 id="publish"><a href="#publish" class="headerlink" title="publish"></a>publish</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo publish [layout] &lt;filename&gt;</div></pre></td></tr></table></figure>
-<p>发表草稿。</p>
-<h2 id="server"><a href="#server" class="headerlink" title="server"></a>server</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo server</div></pre></td></tr></table></figure>
-<p>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a><br>-p, –port        重设端口<br>-s, –static    只使用静态文件<br>-l, –log        启动日记记录，使用覆盖记录格式</p>
-<h2 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div></pre></td></tr></table></figure>
-<p>部署网站。<br>-g, –generate    部署之前预先生成静态文件<br>该命令可以简写为：<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo d</div></pre></td></tr></table></figure></p>
-<h2 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo clean</div></pre></td></tr></table></figure>
-<p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。<br>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
-<h2 id="list"><a href="#list" class="headerlink" title="list"></a>list</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo list &lt;type&gt;</div></pre></td></tr></table></figure>
-<p>列出网站资料。</p>
-<h2 id="version"><a href="#version" class="headerlink" title="version"></a>version</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo version</div></pre></td></tr></table></figure>
-<p>显示 Hexo 版本。</p>
-<h2 id="安全模式"><a href="#安全模式" class="headerlink" title="安全模式"></a>安全模式</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo --safe</div></pre></td></tr></table></figure>
-<p>在安全模式下，不会载入插件和脚本。当您在安装新插件遭遇问题时，可以尝试以安全模式重新执行。</p>
-<h2 id="调试模式"><a href="#调试模式" class="headerlink" title="调试模式"></a>调试模式</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo --debug</div></pre></td></tr></table></figure>
-<h2 id="简洁模式"><a href="#简洁模式" class="headerlink" title="简洁模式"></a>简洁模式</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo --silent</div></pre></td></tr></table></figure>
-<p>隐藏终端信息</p>
-<h2 id="显示草稿"><a href="#显示草稿" class="headerlink" title="显示草稿"></a>显示草稿</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo --draft</div></pre></td></tr></table></figure>
-<h2 id="草稿"><a href="#草稿" class="headerlink" title="草稿"></a>草稿</h2><p>草稿是 Hexo 的一种特殊布局：draft，这种布局在建立时会被保存到 source/_drafts 文件夹，您可通过 publish 命令将草稿移动到 source/_posts 文件夹，该命令的使用方式与 new 十分类似，您也可在命令中指定 layout 来指定布局。<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo publish [layout] &lt;title&gt;</div></pre></td></tr></table></figure><br>草稿默认不会显示在页面中，您可在执行时加上 –draft 参数，或是把 render_drafts 参数设为 true 来预览草稿。</p>
-<p><a href="https://hexo.io/zh-cn/docs/writing.html" target="_blank" rel="external">官方文档</a></p>
-]]></content>
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/hexo/">hexo</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2017/09/16/hexo基本操作/">
+        <span class="next-text nav-default">hexo的基本操作</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
       
         
-        <tags>
-            
-            <tag> hexo </tag>
-            
-        </tags>
+          <a href="mailto:97557237@qq.com" class="iconfont icon-email" title="email"></a>
         
-    </entry>
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://www.facebook.com/profile.php?id=100007908221342" class="iconfont icon-facebook" title="facebook"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/hongtenglong" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+        
+          <a href="http://www.weibo.com/u/1943874462" class="iconfont icon-weibo" title="weibo"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+    
+    2017
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Bazinga</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
     
   
+  <script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://hongtenglong.top/2017/09/17/hexo的基础写作语法/';
+        this.page.identifier = '2017/09/17/hexo的基础写作语法/';
+        this.page.title = 'hexo的基础写作语法';
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
+
+    s.src = '//hongtenglong.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();  
+  </script>
+
+
+
+
+    
+
+
+
+
   
-</search>
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.5.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.5.0"></script>
+
+  </body>
+</html>
