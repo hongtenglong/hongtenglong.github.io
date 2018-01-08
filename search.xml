@@ -3,6 +3,32 @@
   
     
     <entry>
+      <title><![CDATA[JAVA多态学习笔记]]></title>
+      <url>/2018/01/09/JAVA%E5%A4%9A%E6%80%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<h2 id="引用类型转换"><a href="#引用类型转换" class="headerlink" title="引用类型转换"></a>引用类型转换</h2><ol>
+<li>向上类型转换（隐式/自动类型转换），是小类型到大类型的转换<br>父类的引用是可以指向子类对象的</li>
+<li>向下类型转换（强制类型转换），是大类型到小类型</li>
+<li>instanceof运算符，来解决引用对象的类型，避免类型转换的安全性问题<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Animal obj1 = <span class="keyword">new</span> Animal();</div><div class="line"><span class="comment">//父类的引用是可以指向子类对象的</span></div><div class="line">Animal obj2 = <span class="keyword">new</span> Dog();</div><div class="line">Animal obj3 = <span class="keyword">new</span> Cat();</div><div class="line"></div><div class="line"><span class="comment">//Dog obj4 = new Animal(); //这是错的</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Dog dog = new Dog();</div><div class="line">//自动类型提升  向上类型转换</div><div class="line">Animal animal = dog; </div><div class="line"></div><div class="line">// 向下类型转换  强制类型转换</div><div class="line">Dog dog2 = (Dog)animal;</div><div class="line">Cat cat = (Cat)animal; //编译时不报错，运行时会报错</div></pre></td></tr></table></figure>
+<p>因为我们真正开辟的内存空间是Dog类型，当然不能转换成Cat类型，所以运行时就报错<br>所以我们要用到 <code>instanceof</code> 运算符<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Dog dog = <span class="keyword">new</span> Dog();</div><div class="line"><span class="comment">//自动类型提升  向上类型转换</span></div><div class="line">Animal animal = dog; </div><div class="line"></div><div class="line"><span class="comment">// 向下类型转换  强制类型转换</span></div><div class="line">Dog dog2 = (Dog)animal;</div><div class="line"><span class="keyword">if</span>(animal <span class="keyword">instanceof</span> Cat)&#123;</div><div class="line">    Cat cat = (Cat)animal; </div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        System.out.println(<span class="string">"不能进行类型转换"</span>);</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
+<h2 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h2><ol>
+<li><p>语法定义<br>抽象类前使用 <code>abstract</code> 关键字修饰</p>
+</li>
+<li><p>应用场景<br>抽象类只约束子类必须有哪些方法，而不关注子类如何实现。<br>在Java中抽象类表示的是一种继承关系，一个类只能继承一个抽象类，而一个类却可以实现多个接口。</p>
+</li>
+<li><p>使用规则<br>a. abstract 定义抽象类<br>b. bastract 定义抽象方法，只有声明，不需要实现<br>c. 包含抽象方法的类是抽象类<br>d. 抽象类中可以包含普通方法，也可以没有抽象方法<br>e. 抽象类不能直接创建，可以定义引用变量</p>
+</li>
+</ol>
+<p>抽象类就是不能使用new方法进行实例化的类，即没有具体实例对象的类。抽象类有点类似“模板”的作用，目的是根据其格式来创建和修改新的类。对象不能由抽象类直接创建，只可以通过抽象类派生出新的子类，再由其子类来创建对象。当一个类被声明为抽象类时，要在这个类前面加上修饰符abstract。 在抽象类中的成员方法可以包括一般方法和抽象方法。<br>抽象方法就是以abstract修饰的方法，这种方法只声明返回的数据类型、方法名称和所需的参数，没有方法体，也就是说抽象方法只需要声明而不需要实现。当一个方法为抽象方法时，意味着这个方法必须被子类的方法所重写，否则其子类的该方法仍然是abstract的，而这个子类也必须是抽象的，即声明为abstract。<br>抽象类中不一定包含抽象方法，但是包含抽象方法的类一定要被声明为抽象类。抽象类本身不具备实际的功能，只能用于派生其子类。抽象类中可以包含构造方法，但是构造方法不能被声明为抽象。 抽象类不能用final来修饰，即一个类不能既是最终类又是抽象类。 abstract不能与private、static、final、native并列修饰同一个方法</p>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2>]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[JAVA实现邮箱验证]]></title>
       <url>/2018/01/08/JAVA%E5%AE%9E%E7%8E%B0%E9%82%AE%E7%AE%B1%E9%AA%8C%E8%AF%81/</url>
       <content type="html"><![CDATA[<h2 id="什么是JavaMail"><a href="#什么是JavaMail" class="headerlink" title="什么是JavaMail"></a>什么是JavaMail</h2><p>JavaMail，顾名思义，提供给开发者处理电子邮件相关的编程接口。它是Sun发布的用来处理email的API。它可以方便地执行一些常用的邮件传输。我们可以基于JavaMail开发出类似于Microsoft Outlook的应用程序。<br><a id="more"></a></p>
