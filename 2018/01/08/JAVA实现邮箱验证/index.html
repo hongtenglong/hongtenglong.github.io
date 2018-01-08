@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="JAVA实现邮箱验证"/>
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="4E3KpMVmiU" />
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/default" title="Bazinga">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.5.0" />
+
+
+
+<link rel="canonical" href="http://hongtenglong.top/2018/01/08/JAVA实现邮箱验证/"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.5.0" />
+
+
+
+
+
+
+  
+  <script id="baidu_analytics">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?666e8a8139ce9cd0c4c37bc05b809b05";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.1.1/av-min.js"></script>
+  <script id="leancloud">
+    AV.init({
+      appId: "nP4v1105O0o5gwugvzfPBmas-gzGzoHsz",
+      appKey: "vMvGELACWtpATFdmwcH7XGtk"
+    });
+  </script>
+
+
+
+
+
+    <title> JAVA实现邮箱验证 - Bazinga </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">Bazinga</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            Home
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            Archives
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            Tags
+          
+        </li>
+      </a>
+    
+      <a href="/categories">
+        <li class="mobile-menu-item">
+          
+          
+            Categories
+          
+        </li>
+      </a>
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            About
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">Bazinga</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              首页
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              归档
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              标签
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/categories">
+            
+            
+              分类
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              关于
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          JAVA实现邮箱验证
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-01-08
+        </span>
+        
+        
+        <div class="post-visits"
+             data-url="/2018/01/08/JAVA实现邮箱验证/"
+             data-title="JAVA实现邮箱验证">
+            阅读次数
+          </div>
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是JavaMail"><span class="toc-text">什么是JavaMail</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#邮件收发协议"><span class="toc-text">邮件收发协议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#邮件收发过程"><span class="toc-text">邮件收发过程</span></a></li></ol>
+    </div>
+  </div>
+
+
+    <div class="post-content">
+      
+        <h2 id="什么是JavaMail"><a href="#什么是JavaMail" class="headerlink" title="什么是JavaMail"></a>什么是JavaMail</h2><p>JavaMail，顾名思义，提供给开发者处理电子邮件相关的编程接口。它是Sun发布的用来处理email的API。它可以方便地执行一些常用的邮件传输。我们可以基于JavaMail开发出类似于Microsoft Outlook的应用程序。<br><a id="more"></a></p>
+<h2 id="邮件收发协议"><a href="#邮件收发协议" class="headerlink" title="邮件收发协议"></a>邮件收发协议</h2><ol>
+<li><p>SMTP 协议（发送邮件）<br>SMTP（Simple Mail Transfer Protocol）即简单邮件传输协议,它是一组用于由源地址到目的地址传送邮件的规则，由它来控制信件的中转方式。SMTP协议属于TCP/IP协议簇，它帮助每台计算机在发送或中转信件时找到下一个目的地。通过SMTP协议所指定的服务器,就可以把E-mail寄到收信人的服务器上了，整个过程只要几分钟。SMTP服务器则是遵循SMTP协议的发送邮件服务器，用来发送或中转发出的电子邮件。<br>默认端口号是：25</p>
+</li>
+<li><p>POP3 协议（接收邮件）<br>POP3，全名为“Post Office Protocol - Version 3”，即“邮局协议版本3”。是TCP/IP协议族中的一员，由RFC1939 定义。<br>本协议主要用于支持使用客户端远程管理在服务器上的电子邮件。提供了SSL加密的POP3协议被称为POP3S。</p>
+<p>POP 协议支持“离线”邮件处理。其具体过程是：邮件发送到服务器上，电子邮件客户端调用邮件客户机程序以连接服务器，并下载所有未阅读的电子邮件。这种离线访问模式是一种存储转发服务，将邮件从邮件服务器端送到个人终端机器上，一般是PC机或 MAC。一旦邮件发送到 PC 机或MAC上，邮件服务器上的邮件将会被删除。但目前的POP3邮件服务器大都可以“只下载邮件，服务器端并不删除”，也就是改进的POP3协议。<br>默认端口号是：110</p>
+</li>
+</ol>
+<h2 id="邮件收发过程"><a href="#邮件收发过程" class="headerlink" title="邮件收发过程"></a>邮件收发过程</h2><p>假设有两个邮箱 A  和  B<br>A要发送邮件给B<br>A–&gt;SMTP服务器–&gt; B所在的服务器–&gt; POP3服务器 –&gt;B</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> zcp;  </div><div class="line"><span class="keyword">import</span> java.util.Date;  </div><div class="line"><span class="keyword">import</span> java.util.Properties;  </div><div class="line"><span class="keyword">import</span> javax.mail.Address;  </div><div class="line"><span class="keyword">import</span> javax.mail.Authenticator;  </div><div class="line"><span class="keyword">import</span> javax.mail.Message;  </div><div class="line"><span class="keyword">import</span> javax.mail.SendFailedException;  </div><div class="line"><span class="keyword">import</span> javax.mail.Session;  </div><div class="line"><span class="keyword">import</span> javax.mail.Transport;  </div><div class="line"><span class="keyword">import</span> javax.mail.internet.InternetAddress;  </div><div class="line"><span class="keyword">import</span> javax.mail.internet.MimeMessage;  </div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Mail</span> </span>&#123;  </div><div class="line">      </div><div class="line"><span class="comment">//  private String host = "smtp.yeah.net";  </span></div><div class="line">    <span class="keyword">private</span> String host = <span class="string">"smtp.qq.com"</span>;  </div><div class="line">    <span class="keyword">private</span> String mail_head_name = <span class="string">"this is head of this mail"</span>;  </div><div class="line">    <span class="keyword">private</span> String mail_head_value = <span class="string">"this is head of this mail"</span>;  </div><div class="line">    <span class="keyword">private</span> String mail_to = <span class="string">"zhang854429783@yeah.net"</span>;  </div><div class="line">    <span class="keyword">private</span> String mail_from = <span class="string">"zhang854429783@qq.com"</span>;  </div><div class="line">    <span class="keyword">private</span> String mail_subject = <span class="string">"邮件主题"</span>;  </div><div class="line">    <span class="keyword">private</span> String mail_body = <span class="string">"邮件内容"</span>;  </div><div class="line">    <span class="keyword">private</span> String personalName = <span class="string">"我的邮件"</span>;<span class="comment">//相当于称呼，通常显示在你的发件人栏的发件人邮箱地址前  </span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sendMail</span><span class="params">()</span> <span class="keyword">throws</span> SendFailedException </span>&#123;  </div><div class="line">        <span class="keyword">try</span> &#123;  </div><div class="line">            Properties props = <span class="keyword">new</span> Properties();<span class="comment">// 获取系统环境  </span></div><div class="line">            props.put(<span class="string">"mail.smtp.host"</span>, host);  </div><div class="line">            props.put(<span class="string">"mail.smtp.auth"</span>, <span class="string">"true"</span>);  </div><div class="line">            System.out.println(props);  </div><div class="line">            Authenticator auth = <span class="keyword">new</span> Email_Autherticator();<span class="comment">// 进行邮件服务用户认证  </span></div><div class="line">            Session session = Session.getDefaultInstance(props, auth);<span class="comment">// 设置session,和邮件服务器进行通讯  </span></div><div class="line">            MimeMessage message = <span class="keyword">new</span> MimeMessage(session);  </div><div class="line">            message.setContent(<span class="string">"Hello"</span>, <span class="string">"text/plain"</span>);<span class="comment">// 设置邮件格式  </span></div><div class="line">            <span class="comment">/** </span></div><div class="line"><span class="comment">             * setText("Email Content. ")默认的MIME类型是 text/plain如果只是发普通文本， </span></div><div class="line"><span class="comment">             * 可以用它来代替setContent("Hello", "text/plain") </span></div><div class="line"><span class="comment">             */</span>  </div><div class="line"><span class="comment">//          message.setText("Email Content. ");  </span></div><div class="line">            message.setSubject(mail_subject);<span class="comment">// 设置邮件主题  </span></div><div class="line">            message.setText(mail_body);<span class="comment">// 设置邮件内容  </span></div><div class="line">            message.setHeader(mail_head_name, mail_head_value);<span class="comment">// 设置邮件标题  </span></div><div class="line">            message.setSentDate(<span class="keyword">new</span> Date());<span class="comment">// 设置邮件发送时期  </span></div><div class="line">            Address address = <span class="keyword">new</span> InternetAddress(mail_from, personalName);  </div><div class="line">            message.setFrom(address);<span class="comment">// 设置邮件发送者的地址  </span></div><div class="line">            Address toaddress = <span class="keyword">new</span> InternetAddress(mail_to);<span class="comment">// 设置邮件接收者的地址  </span></div><div class="line">            message.addRecipient(Message.RecipientType.TO, toaddress);  </div><div class="line">            System.out.println(message);  </div><div class="line">            Transport.send(message);  </div><div class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;  </div><div class="line">            System.out.println(<span class="string">"发送失败！"</span>);  </div><div class="line">            e.printStackTrace();  </div><div class="line">        &#125;  </div><div class="line">        <span class="comment">// return flag;  </span></div><div class="line">    &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> zcp;  </div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;  </div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;  </div><div class="line">        Mail m = <span class="keyword">new</span> Mail();  </div><div class="line">        <span class="keyword">try</span> &#123;  </div><div class="line">            m.sendMail();  </div><div class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;  </div><div class="line">              </div><div class="line">        &#125;  </div><div class="line">    &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>参考：<a href="http://blog.csdn.net/zhang854429783/article/details/6446635" target="_blank" rel="external">http://blog.csdn.net/zhang854429783/article/details/6446635</a></p>
+
+      
+    </div>
+
+    
+      
+      
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2018/01/07/JAVA多线程笔记/">
+        <span class="next-text nav-default">JAVA多线程笔记</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:97557237@qq.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://www.facebook.com/profile.php?id=100007908221342" class="iconfont icon-facebook" title="facebook"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/hongtenglong" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+        
+          <a href="http://www.weibo.com/u/1943874462" class="iconfont icon-weibo" title="weibo"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2017 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Bazinga</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  <script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://hongtenglong.top/2018/01/08/JAVA实现邮箱验证/';
+        this.page.identifier = '2018/01/08/JAVA实现邮箱验证/';
+        this.page.title = 'JAVA实现邮箱验证';
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
+
+    s.src = '//hongtenglong.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();  
+  </script>
+
+
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.5.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.5.0"></script>
+
+  </body>
+</html>
