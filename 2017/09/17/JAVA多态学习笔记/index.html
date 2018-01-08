@@ -17,7 +17,7 @@
 
 
 
-  <meta name="description" content="洪腾龙的博客"/>
+  <meta name="description" content="JAVA多态学习笔记"/>
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="http://hongtenglong.top/"/>
+<link rel="canonical" href="http://hongtenglong.top/2017/09/17/JAVA多态学习笔记/"/>
 
 
 <link rel="stylesheet" type="text/css" href="/css/style.css?v=2.5.0" />
@@ -97,7 +97,7 @@
 
 
 
-    <title> Bazinga </title>
+    <title> JAVA多态学习笔记 - Bazinga </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -226,204 +226,12 @@
         <div class="content-wrapper">
           <div id="content" class="content">
             
-  <section id="posts" class="posts">
-    
-      
+  
   <article class="post">
     <header class="post-header">
       <h1 class="post-title">
         
-          <a class="post-link" href="/2018/01/07/JAVA多线程笔记/">JAVA多线程笔记</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-01-07
-        </span>
-        
-        
-        <div class="post-visits"
-             data-url="/2018/01/07/JAVA多线程笔记/"
-             data-title="JAVA多线程笔记">
-            阅读次数
-          </div>
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-
-        
-          <h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h2><p> 线程是指一个任务从头至尾的执行流。线程提供了运行一个任务的机制。对于Java而言，可以在一个程序中并发地启动多个线程。这些线程可以在多处理器系统上同时运行。</p>
-<h2 id="runnable接口-和-Thread类"><a href="#runnable接口-和-Thread类" class="headerlink" title="runnable接口 和 Thread类"></a>runnable接口 和 Thread类</h2><ul>
-<li>runnable 接口<br>任务类必须实现runnable接口，它只包含一个run方法。需要实现这个方法来告诉系统线程将如何运行。</li>
-</ul>
-<ul>
-<li>Thread类<br>包含为任务而创建的线程的构造方法，以及控制线程的方法。</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">类别</th>
-<th style="text-align:left">方法签名</th>
-<th style="text-align:left">简介</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">线程的创建</td>
-<td style="text-align:left">Thread()</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">线程的创建</td>
-<td style="text-align:left">Thread(String name)</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">线程的创建</td>
-<td style="text-align:left">Thread(Runnable target)</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">线程的创建</td>
-<td style="text-align:left">Thread(Runnable target,String name)</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">线程的方法</td>
-<td style="text-align:left">void start()</td>
-<td style="text-align:left">启动线程</td>
-</tr>
-<tr>
-<td style="text-align:left">线程的方法</td>
-<td style="text-align:left">static void sleep(long mills)</td>
-<td style="text-align:left">线程休眠</td>
-</tr>
-<tr>
-<td style="text-align:left">线程的方法</td>
-<td style="text-align:left">static void sleep(long mills,int nanos)</td>
-<td style="text-align:left">线程休眠(精确到纳秒)</td>
-</tr>
-<tr>
-<td style="text-align:left">线程的方法</td>
-<td style="text-align:left">void join()</td>
-<td style="text-align:left">使其他线程等待当前线程终止</td>
-</tr>
-<tr>
-<td style="text-align:left">线程的方法</td>
-<td style="text-align:left">void join(long mills)</td>
-<td style="text-align:left">使其他线程等待当前线程终止</td>
-</tr>
-<tr>
-<td style="text-align:left">线程的方法</td>
-<td style="text-align:left">void join(long mills,int nanos)</td>
-<td style="text-align:left">使其他线程等待当前线程终止</td>
-</tr>
-<tr>
-<td style="text-align:left">线程的方法</td>
-<td style="text-align:left">static void yield()</td>
-<td style="text-align:left">返回当前运行线程的引用</td>
-</tr>
-</tbody>
-</table>
-<h2 id="synchronized关键字"><a href="#synchronized关键字" class="headerlink" title="synchronized关键字"></a>synchronized关键字</h2><p> 为避免竞争状态，防止多个线程同时进入程序的某个特定部分，即临界区，以便一次只有一个线程可以访问临界区。</p>
-<h2 id="volatile-关键字"><a href="#volatile-关键字" class="headerlink" title="volatile 关键字"></a>volatile 关键字</h2><p> 用在多线程，同步变量。 线程为了提高效率，将某成员变量(如A)拷贝了一份（如B），线程中对A的访问其实访问的是B。只在某些动作时才进行A和B的同步。因此存在A和B不一致的情况。volatile就是用来避免这种情况的。volatile告诉jvm， 它所修饰的变量不保留拷贝，直接访问主内存中的（也就是上面说的A)<br> 转自：<a href="http://sakyone.iteye.com/blog/668091" target="_blank" rel="external">http://sakyone.iteye.com/blog/668091</a></p>
-<h2 id="线程的互斥与同步"><a href="#线程的互斥与同步" class="headerlink" title="线程的互斥与同步"></a>线程的互斥与同步</h2><ul>
-<li><p>互斥<br>指在某一时刻指允许一个进程运行其中的程序片，具有排他性和唯一性。<br>对于线程A和线程B来讲，在同一时刻，只允许一个线程对临界资源进行操作，即当A进入临界区对资源操作时，B就必须等待；当A执行完，退出临界区后，B才能对临界资源进行操作。</p>
-</li>
-<li><p>同步<br>指的是在互斥的基础上，实现进程之间的有序访问。假设现有线程A和线程B，线程A需要往缓冲区写数据，线程B需要从缓冲区读数据，但他们之间存在一种制约关系，即当线程A写的时候，B不能来拿数据；B在拿数据的时候A不能往缓冲区写，也就是说，只有当A写完数据（或B取走数据），B才能来读数据（或A才能往里写数据）。这种关系就是一种线程的同步关系。</p>
-</li>
-</ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
-<li>如何创建线程及线程的基本操作</li>
-<li>可见性及volatile关键字</li>
-<li>争用条件</li>
-<li>线程的互斥synchronized</li>
-<li>线程的同步wait/ notifyAll</li>
-</ol>
-
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2017/09/17/hexo的基础写作语法/">hexo的基础写作语法</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2017-09-17
-        </span>
-        
-        
-        <div class="post-visits"
-             data-url="/2017/09/17/hexo的基础写作语法/"
-             data-title="hexo的基础写作语法">
-            阅读次数
-          </div>
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
-      
-        
-        
-          
-        
-
-        
-          <h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>Markdown 支持两种标题的语法，类 Setext 和类 atx 形式</p>
-<h3 id="类-Setext-形式"><a href="#类-Setext-形式" class="headerlink" title="类 Setext 形式"></a>类 Setext 形式</h3><p>类 Setext 形式是用底线的形式，利用 = （最高阶标题）和 - （第二阶标题），例如：</p>
-<pre><code>This is an H1
- =============
-
- This is an H2
- -------------
-</code></pre><p>任何数量的 = 和 - 都可以有效果。</p>
-          <div class="read-more">
-            <a href="/2017/09/17/hexo的基础写作语法/" class="read-more-link">阅读更多</a>
-          </div>
-        
-      
-    </div>
-
-    
-
-    
-
-  </article>
-
-    
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2017/09/17/JAVA多态学习笔记/">JAVA多态学习笔记</a>
+          JAVA多态学习笔记
         
       </h1>
 
@@ -444,14 +252,17 @@
 
     
     
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#引用类型转换"><span class="toc-text">引用类型转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#抽象类"><span class="toc-text">抽象类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#接口"><span class="toc-text">接口</span></a></li></ol>
+    </div>
+  </div>
+
 
     <div class="post-content">
       
-        
-        
-
-        
-          <h2 id="引用类型转换"><a href="#引用类型转换" class="headerlink" title="引用类型转换"></a>引用类型转换</h2><ol>
+        <h2 id="引用类型转换"><a href="#引用类型转换" class="headerlink" title="引用类型转换"></a>引用类型转换</h2><ol>
 <li>向上类型转换（隐式/自动类型转换），是小类型到大类型的转换<br>父类的引用是可以指向子类对象的</li>
 <li>向下类型转换（强制类型转换），是大类型到小类型</li>
 <li>instanceof运算符，来解决引用对象的类型，避免类型转换的安全性问题<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Animal obj1 = <span class="keyword">new</span> Animal();</div><div class="line"><span class="comment">//父类的引用是可以指向子类对象的</span></div><div class="line">Animal obj2 = <span class="keyword">new</span> Dog();</div><div class="line">Animal obj3 = <span class="keyword">new</span> Cat();</div><div class="line"></div><div class="line"><span class="comment">//Dog obj4 = new Animal(); //这是错的</span></div></pre></td></tr></table></figure>
@@ -469,81 +280,60 @@
 </ol>
 <p>抽象类就是不能使用new方法进行实例化的类，即没有具体实例对象的类。抽象类有点类似“模板”的作用，目的是根据其格式来创建和修改新的类。对象不能由抽象类直接创建，只可以通过抽象类派生出新的子类，再由其子类来创建对象。当一个类被声明为抽象类时，要在这个类前面加上修饰符abstract。 在抽象类中的成员方法可以包括一般方法和抽象方法。<br>抽象方法就是以abstract修饰的方法，这种方法只声明返回的数据类型、方法名称和所需的参数，没有方法体，也就是说抽象方法只需要声明而不需要实现。当一个方法为抽象方法时，意味着这个方法必须被子类的方法所重写，否则其子类的该方法仍然是abstract的，而这个子类也必须是抽象的，即声明为abstract。<br>抽象类中不一定包含抽象方法，但是包含抽象方法的类一定要被声明为抽象类。抽象类本身不具备实际的功能，只能用于派生其子类。抽象类中可以包含构造方法，但是构造方法不能被声明为抽象。 抽象类不能用final来修饰，即一个类不能既是最终类又是抽象类。 abstract不能与private、static、final、native并列修饰同一个方法</p>
 <h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2>
-        
       
     </div>
 
     
-
-    
-
-  </article>
-
-    
       
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2017/09/16/hexo基本操作/">hexo的基本操作</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2017-09-16
-        </span>
-        
-        
-        <div class="post-visits"
-             data-url="/2017/09/16/hexo基本操作/"
-             data-title="hexo的基本操作">
-            阅读次数
-          </div>
-        
-      </div>
-    </header>
-
-    
-    
-
-    <div class="post-content">
       
-        
-        
-          
-        
 
-        
-          <h2 id="init"><a href="#init" class="headerlink" title="init"></a>init</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init [folder]</div></pre></td></tr></table></figure>
-<p>新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。</p>
-<h2 id="new"><a href="#new" class="headerlink" title="new"></a>new</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new [layout] &lt;title&gt;</div></pre></td></tr></table></figure>
-<p>新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
-          <div class="read-more">
-            <a href="/2017/09/16/hexo基本操作/" class="read-more-link">阅读更多</a>
-          </div>
-        
+
+
       
-    </div>
-
+      
     
 
     
-
-  </article>
-
+      <footer class="post-footer">
+        
+        
+        
+  <nav class="post-nav">
     
-  </section>
-
-  
-  <nav class="pagination">
+      <a class="prev" href="/2017/09/17/hexo的基础写作语法/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">hexo的基础写作语法</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
     
+    
+      <a class="next" href="/2017/09/16/hexo基本操作/">
+        <span class="next-text nav-default">hexo的基本操作</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
     
   </nav>
 
+      </footer>
+    
+
+  </article>
+
 
           </div>
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
       </main>
@@ -633,6 +423,24 @@
     </div>
 
     
+  
+  <script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://hongtenglong.top/2017/09/17/JAVA多态学习笔记/';
+        this.page.identifier = '2017/09/17/JAVA多态学习笔记/';
+        this.page.title = 'JAVA多态学习笔记';
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
+
+    s.src = '//hongtenglong.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();  
+  </script>
+
+
 
 
     
