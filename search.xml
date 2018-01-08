@@ -6,7 +6,8 @@
       <title><![CDATA[JAVA多线程笔记]]></title>
       <url>/2018/01/07/JAVA%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%AC%94%E8%AE%B0/</url>
       <content type="html"><![CDATA[<h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h2><p> 线程是指一个任务从头至尾的执行流。线程提供了运行一个任务的机制。对于Java而言，可以在一个程序中并发地启动多个线程。这些线程可以在多处理器系统上同时运行。</p>
-<h2 id="runnable接口-和-Thread类"><a href="#runnable接口-和-Thread类" class="headerlink" title="runnable接口 和 Thread类"></a>runnable接口 和 Thread类</h2><ul>
+<h2 id="runnable接口-和-Thread类"><a href="#runnable接口-和-Thread类" class="headerlink" title="runnable接口 和 Thread类"></a>runnable接口 和 Thread类</h2><a id="more"></a>
+<ul>
 <li>runnable 接口<br>任务类必须实现runnable接口，它只包含一个run方法。需要实现这个方法来告诉系统线程将如何运行。</li>
 </ul>
 <ul>
